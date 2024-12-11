@@ -9,9 +9,11 @@ Pasirinkau decentralizuotos bilietų prekybvietės verslo modelį. Bet kuris tin
 Testavimui lokialiame tinkle naudojau Ganache, tam kad galėčiau nesunkiai matyti visas transakcijas, vykstančias išmaniojoje sutartyje.
 
 Žemiau galite matyti transakcijų istoriją lokaliame tinkle:
+
 ![Ganache](1.png)
 
 ## Testavimas Ethereum testiniame tinkle Sepolia
 
 Išmaniosios sutarties testavimui Ethereum testiniame tinkle naudojau Sepolia testinį tinklą, o tam, kad šiame testiniame tinkle galėčiau dislokuoti savo išmaniąją sutartį, naudojau įrankį Alchemy. Apačioje pateiktame paveikslėlyje galite matyti Sepolia tinkle atliktas transakcijas mano išmaniojoje sutartyje:
+
 ![Sepolia](2.png)
