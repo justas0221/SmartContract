@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decentralized Event Ticketing</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4/web3.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Decentralized Event Ticketing</h1>
+
+  <button id="connectWallet">Connect Wallet</button>
+
+  <h2>Create an Event</h2>
+  <input type="text" id="eventName" placeholder="Event Name" />
+  <input type="text" id="eventDate" placeholder="Event Date (YYYY-MM-DD)" />
+  <input type="text" id="eventLocation" placeholder="Location" />
+  <input type="text" id="ticketPrice" placeholder="Ticket Price (ETH)" />
+  <button id="createEvent">Create Event</button>
+
+  <h2>Issue a Ticket</h2>
+  <input type="number" id="eventIdForIssue" placeholder="Event ID" />
+  <button id="issueTicket">Issue Ticket</button>
+
+  <h2>Buy a Ticket</h2>
+  <input type="number" id="eventIdForBuy" placeholder="Event ID" />
+  <button id="buyTicket">Buy Ticket</button>
+
+  <h2>Get Event Details</h2>
+  <input type="number" id="eventIdForDetails" placeholder="Event ID" />
+  <button id="getEvent">Get Event Details</button>
+  <pre id="eventDetails"></pre>
+
+  <h2>Check Ticket Owner</h2>
+  <input type="number" id="eventIdForOwner" placeholder="Event ID" />
+  <input type="number" id="ticketIdForOwner" placeholder="Ticket ID" />
+  <button id="checkOwner">Check Ticket Owner</button>
+  <pre id="ticketOwner"></pre>
+
+  <h2>Transfer Ticket</h2>
+  <input type="number" id="eventIdForTransfer" placeholder="Event ID" />
+  <input type="number" id="ticketIdForTransfer" placeholder="Ticket ID" />
+  <input type="text" id="newOwnerAddress" placeholder="New Owner Address" />
+  <button id="transferTicket">Transfer Ticket</button>
+
+  <script src="app.js"></script>
+</body>
+</html>

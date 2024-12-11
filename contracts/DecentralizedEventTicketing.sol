@@ -68,6 +68,8 @@ contract DecentralizedEventTicketing {
         require(eventDetails.ticketsSold < eventDetails.ticketCounter, "All tickets are sold out");
         require(msg.value == eventDetails.ticketPrice, "Incorrect ticket price");
 
+        require(msg.sender != eventDetails.creator, "Event creator cannot buy tickets to their own event");
+
         Ticket storage ticket = eventTickets[eventId][eventDetails.ticketsSold];
         require(ticket.isForSale, "Ticket is not available for sale");
 

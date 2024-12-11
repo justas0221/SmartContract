@@ -1,15 +1,23 @@
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+require('dotenv').config();
+
+const { MNEMONIC, ALCHEMY_SEPOLIA_URL } = process.env;
+
 module.exports = {
   networks: {
-    development: {
-      host: "127.0.0.1",     // Localhost
-      port: 9545,            // Default Ganache port
-      network_id: "*",       // Match any network ID
-    }
+    sepolia: {
+      provider: () => new HDWalletProvider(MNEMONIC, ALCHEMY_SEPOLIA_URL),
+      network_id: 11155111,  // Sepolia network ID
+      gas: 3000000,
+      gasPrice: 10000000000, // 10 Gwei
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
   },
-
   compilers: {
     solc: {
-      version: "0.8.0"       // Specify the compiler version
+      version: "0.8.21",
     }
   }
 };
