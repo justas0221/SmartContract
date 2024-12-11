@@ -1,0 +1,15 @@
+# Ignore build artifacts
+build/
+artifacts/
+*.json
+
+# Ignore dependencies
+node_modules/
+
+# Ignore environment variables
+.env
+
+# Ignore editor and OS files
+.vscode/
+.idea/
+.DS_Store
